@@ -18,4 +18,7 @@ test:
   password: password
 
 production:
+  adapter: postgresql  # ← 明示的にアダプタを指定
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
