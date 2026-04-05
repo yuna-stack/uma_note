@@ -1,0 +1,13 @@
+<h1>レースメモ詳細</h1>
+<p><strong>レース名:</strong><%= @race_memo.race_name %></p>
+<p><strong>開催日:</strong><%= @race_memo.held_on %></p>
+<p><strong>馬場状態:</strong><%= @race_memo.track_condition %></p>
+<p><strong>本命馬:</strong><%= @race_memo.main_horse %></p>
+<p><strong>対抗馬:</strong><%= @race_memo.second_horse %></p>
+<p><strong>穴馬:</strong><%= @race_memo.dark_horse %></p>
+<p><strong>予想メモ:</strong><%= @race_memo.prediction_memo %></p>
+<p><strong>結果メモ:</strong><%= @race_memo.result_memo %></p>
+
+<%= link_to "編集する", edit_race_memo_path(@race_memo) %>
+<%= button_to "削除する", race_memo_path(@race_memo), method: :delete, data: { turbo_confirm: "本当に削除しますか？"} %>
+<%= link_to "一覧に戻る", race_memos_path %>

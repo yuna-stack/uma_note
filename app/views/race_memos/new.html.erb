@@ -1,0 +1,50 @@
+<h1>新規メモ作成</h1>
+
+<%= form_with model: @race_memo do |f| %>
+    <div>
+    <%= f.label :race_name, "レース名" %>
+    <%= f.text_field :race_name %>
+    </div>
+
+    <div>
+    <%= f.label :held_on, "開催日" %>
+    <%= f.date_field :held_on %>
+    </div>
+
+    <div>
+    <%= f.label :track_condition, "馬場状態" %>
+    <%= f.select :track_comdition, ["良", "稍重", "重", "不良" ], include_blank: "選択してください" %>
+    </div>
+    
+    <div>
+    <%= f.label :main_horse, "本命馬" %>
+    <%= f.text_field :main_horse %>
+    </div>
+    
+    <div>
+    <%= f.label :second_horse, "対抗馬" %>
+    <%= f.text_field :second_horse %>
+    </div>
+
+    <div>
+    <%= f.label :dark_horse, "穴馬" %>
+    <%= f.text_field :dark_horse %>
+    </div>
+
+    
+    <div class="form-group">
+    <%= f.label :prediction_memo, "予想メモ" %>
+    <%= f.text_area :prediction_memo, class: "form-textarea" %>
+    </div>
+
+    <div>
+    <%= f.label :result_memo, "結果メモ" %>
+    <%= f.text_field :result_memo %>
+    </div>
+
+    <div>
+    <%= f.submit "保存" %>
+    </div>
+
+    <%= link_to "トップページに戻る", race_memos_path %>
+    <% end %>

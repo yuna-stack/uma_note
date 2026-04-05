@@ -1,0 +1,10 @@
+<h1>レース予想メモ一覧</h1>
+<%= link_to "新規作成", new_race_memo_path %>
+
+<ul>
+ <% @race_memos.each do |memo| %>
+   <li>
+     <%= link_to memo.race_name, race_memo_path(memo) %>
+   </li>
+ <% end %>
+ </ul>
