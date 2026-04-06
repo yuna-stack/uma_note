@@ -1,5 +1,5 @@
 ## uma_note
-### 公開URL：http://127.0.0.1:3000/race_memos
+### 公開URL：https://uma-note.onrender.com
 ## アプリを作った理由
 競馬の予想メモを管理するアプリです。
 考えがまとまらないときに使いたくてメモにしてみました。
@@ -10,12 +10,9 @@
 一覧・詳細表示
 ## 技術スタック
 - Ruby on Rails
-:
 ## 今後の改善ポイント
 カテゴリ機能
 検索機能
 UI改善
-- Ajax対応でコメントやいいねを非同期化
 ## デプロイ
-- Render / Heroku などで公開
-- URL: http://127.0.0.1:3000/race_memos
+- Renderで公開
